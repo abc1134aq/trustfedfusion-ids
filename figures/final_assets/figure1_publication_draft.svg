@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="820" viewBox="0 0 1440 820" role="img" aria-labelledby="title desc">
+  <title id="title">Figure 1 publication draft: motivated example for TrustFedFusion-IDS</title>
+  <desc id="desc">Three critical-infrastructure sites keep raw traffic local, construct weak threat evidence, pass reliability summaries and model updates to a federated server, and receive audited intrusion-detection outputs.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0f766e"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 15px Arial, Helvetica, sans-serif; fill: #475569; }
+      .zone { font: 700 18px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .label { font: 700 15px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .small { font: 400 13px Arial, Helvetica, sans-serif; fill: #334155; }
+      .tiny { font: 400 12px Arial, Helvetica, sans-serif; fill: #475569; }
+      .site { fill: #f8fafc; stroke: #94a3b8; stroke-width: 1.5; rx: 10; }
+      .traffic { fill: #e2e8f0; stroke: #64748b; stroke-width: 1; rx: 8; }
+      .evidence { fill: #ccfbf1; stroke: #0f766e; stroke-width: 1; rx: 8; }
+      .risk { fill: #fef3c7; stroke: #b45309; stroke-width: 1; rx: 8; }
+      .bad { fill: #fee2e2; stroke: #b91c1c; stroke-width: 1.2; rx: 8; }
+      .module { fill: #eff6ff; stroke: #2563eb; stroke-width: 1.5; rx: 10; }
+      .server { fill: #f5f3ff; stroke: #7c3aed; stroke-width: 1.5; rx: 12; }
+      .output { fill: #ecfdf5; stroke: #15803d; stroke-width: 1.5; rx: 12; }
+      .gate { fill: #fff7ed; stroke: #c2410c; stroke-width: 1.2; rx: 10; }
+      .arrow { stroke: #334155; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .arrow-teal { stroke: #0f766e; stroke-width: 2.2; fill: none; marker-end: url(#arrow-teal); }
+      .dash { stroke: #64748b; stroke-width: 1.5; stroke-dasharray: 7 7; fill: none; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1440" height="820" fill="#ffffff"/>
+  <text x="44" y="48" class="title">TrustFedFusion-IDS studies reliable threat-evidence fusion, not a traffic-only IDS classifier</text>
+  <text x="44" y="76" class="subtitle">Raw traffic stays local. Weak and noisy threat hints are fused through reliability summaries and audited under random, dropout, poisoning, and calibration controls.</text>
+
+  <text x="52" y="124" class="zone">A. Local critical-infrastructure sites</text>
+  <text x="485" y="124" class="zone">B. Local TrustFedFusion adapter</text>
+  <text x="900" y="124" class="zone">C. Federated evaluation</text>
+  <text x="1210" y="124" class="zone">D. Audited outputs</text>
+
+  <rect x="34" y="145" width="360" height="560" class="site"/>
+  <rect x="424" y="145" width="410" height="560" class="site"/>
+  <rect x="864" y="145" width="270" height="560" class="site"/>
+  <rect x="1164" y="145" width="236" height="560" class="site"/>
+
+  <g transform="translate(58,172)">
+    <rect width="310" height="142" class="site"/>
+    <text x="18" y="28" class="label">Site A: IIoT gateway</text>
+    <rect x="18" y="45" width="128" height="34" class="traffic"/>
+    <text x="30" y="67" class="small">Flow statistics</text>
+    <rect x="164" y="45" width="126" height="34" class="evidence"/>
+    <text x="176" y="67" class="small">Protocol hints</text>
+    <rect x="18" y="91" width="272" height="34" class="risk"/>
+    <text x="30" y="113" class="small">Non-IID attack mix</text>
+  </g>
+
+  <g transform="translate(58,346)">
+    <rect width="310" height="142" class="site"/>
+    <text x="18" y="28" class="label">Site B: industrial network</text>
+    <rect x="18" y="45" width="128" height="34" class="traffic"/>
+    <text x="30" y="67" class="small">Tabular flows</text>
+    <rect x="164" y="45" width="126" height="34" class="evidence"/>
+    <text x="176" y="67" class="small">Weak CTI hint</text>
+    <rect x="18" y="91" width="272" height="34" class="bad"/>
+    <text x="30" y="113" class="small">Missing or noisy source</text>
+  </g>
+
+  <g transform="translate(58,520)">
+    <rect width="310" height="142" class="site"/>
+    <text x="18" y="28" class="label">Site C: edge monitor</text>
+    <rect x="18" y="45" width="128" height="34" class="traffic"/>
+    <text x="30" y="67" class="small">Device state</text>
+    <rect x="164" y="45" width="126" height="34" class="bad"/>
+    <text x="176" y="67" class="small">Shuffled hint</text>
+    <rect x="18" y="91" width="272" height="34" class="bad"/>
+    <text x="30" y="113" class="small">Possible malicious update</text>
+  </g>
+
+  <g transform="translate(454,176)">
+    <rect width="350" height="92" class="module"/>
+    <text x="22" y="30" class="label">1. Leakage guard</text>
+    <text x="22" y="56" class="small">No true label-to-CTI mapping as input</text>
+    <text x="22" y="76" class="tiny">Attack_label excluded from features</text>
+  </g>
+
+  <g transform="translate(454,304)">
+    <rect width="350" height="96" class="module"/>
+    <text x="22" y="30" class="label">2. Weak evidence adapter</text>
+    <text x="22" y="56" class="small">Protocol and source-derived hints</text>
+    <text x="22" y="78" class="tiny">Matched with random CTI negative controls</text>
+  </g>
+
+  <g transform="translate(454,436)">
+    <rect width="350" height="96" class="gate"/>
+    <text x="22" y="30" class="label">3. Evidence-source reliability gate</text>
+    <text x="22" y="56" class="small">Weights weak, missing, and corrupted evidence</text>
+    <text x="22" y="78" class="tiny">Reliability is evaluated; not assumed correct</text>
+  </g>
+
+  <g transform="translate(454,568)">
+    <rect width="350" height="92" class="module"/>
+    <text x="22" y="30" class="label">4. Local IDS update</text>
+    <text x="22" y="56" class="small">Traffic-only, weak concat, source gate</text>
+    <text x="22" y="76" class="tiny">Per-family recall and Normal FPR tracked</text>
+  </g>
+
+  <g transform="translate(894,182)">
+    <rect width="210" height="116" class="server"/>
+    <text x="22" y="32" class="label">Robust FL layer</text>
+    <text x="22" y="58" class="small">FedAvg / FedProx</text>
+    <text x="22" y="80" class="small">Median / trimmed mean</text>
+    <text x="22" y="102" class="small">Krum failure audit</text>
+  </g>
+
+  <g transform="translate(894,348)">
+    <rect width="210" height="116" class="server"/>
+    <text x="22" y="32" class="label">Evidence stressors</text>
+    <text x="22" y="58" class="small">Source dropout</text>
+    <text x="22" y="80" class="small">Hint poisoning</text>
+    <text x="22" y="102" class="small">Random CTI control</text>
+  </g>
+
+  <g transform="translate(894,514)">
+    <rect width="210" height="116" class="server"/>
+    <text x="22" y="32" class="label">Calibration audit</text>
+    <text x="22" y="58" class="small">ECE / Brier</text>
+    <text x="22" y="80" class="small">Mean confidence</text>
+    <text x="22" y="102" class="small">Boundary notes</text>
+  </g>
+
+  <g transform="translate(1192,178)">
+    <rect width="180" height="98" class="output"/>
+    <text x="18" y="30" class="label">Detection</text>
+    <text x="18" y="56" class="small">Macro-F1</text>
+    <text x="18" y="78" class="small">Per-family recall</text>
+  </g>
+
+  <g transform="translate(1192,322)">
+    <rect width="180" height="98" class="output"/>
+    <text x="18" y="30" class="label">Operations</text>
+    <text x="18" y="56" class="small">Normal FPR</text>
+    <text x="18" y="78" class="small">Latency / comm.</text>
+  </g>
+
+  <g transform="translate(1192,466)">
+    <rect width="180" height="134" class="output"/>
+    <text x="18" y="30" class="label">Claim gate</text>
+    <text x="18" y="56" class="small">Positive evidence</text>
+    <text x="18" y="78" class="small">Negative evidence</text>
+    <text x="18" y="100" class="small">Blocked claims</text>
+    <text x="18" y="122" class="tiny">No P17 overclaim</text>
+  </g>
+
+  <path class="arrow-teal" d="M372 243 C400 243, 414 222, 448 222"/>
+  <path class="arrow-teal" d="M372 417 C405 417, 416 352, 448 352"/>
+  <path class="arrow-teal" d="M372 591 C405 591, 418 484, 448 484"/>
+  <path class="arrow" d="M628 268 L628 300"/>
+  <path class="arrow" d="M628 400 L628 432"/>
+  <path class="arrow" d="M628 532 L628 564"/>
+  <path class="arrow" d="M808 614 C850 614, 858 240, 888 240"/>
+  <path class="arrow-teal" d="M808 484 C850 484, 858 406, 888 406"/>
+  <path class="arrow" d="M1000 298 L1000 344"/>
+  <path class="arrow" d="M1000 464 L1000 510"/>
+  <path class="arrow" d="M1104 240 C1140 240, 1150 228, 1186 228"/>
+  <path class="arrow" d="M1104 406 C1140 406, 1150 372, 1186 372"/>
+  <path class="arrow" d="M1104 572 C1140 572, 1150 536, 1186 536"/>
+
+  <path class="dash" d="M414 138 L414 714"/>
+  <text x="426" y="724" class="tiny">Privacy boundary: raw flows stay inside local organizations</text>
+
+  <rect x="48" y="735" width="1350" height="48" fill="#fff7ed" stroke="#c2410c" stroke-width="1.2" rx="10"/>
+  <text x="70" y="765" class="small">Integrity boundary: weak evidence is protocol/source-derived, random controls are reported, calibration remains an evaluated limitation, and P17 comparison stays metadata-level until full text lands.</text>
+</svg>

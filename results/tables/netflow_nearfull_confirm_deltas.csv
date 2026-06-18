@@ -1,0 +1,9 @@
+dataset,scenario,delta_macro_f1_vs_traffic,delta_macro_f1_vs_weak,delta_normal_fpr_vs_traffic,delta_ece_vs_traffic,delta_brier_vs_traffic,interpretation
+nf_bot_iot,random_cti,0.014559,-0.043652,-0.002415,-0.005999,0.000061,Random control close to traffic-only; supports non-random evidence value.
+nf_bot_iot,source_gate,0.052428,-0.005783,-0.106539,-0.028262,-0.077276,"Partial confirmation: source gate beats traffic/random and has best FPR/ECE, but weak concat has slightly higher Macro-F1."
+nf_bot_iot,traffic_only,0.000000,-0.058211,0.000000,0.000000,0.000000,baseline
+nf_bot_iot,weak_cti_concat,0.058211,0.000000,-0.104318,-0.022914,-0.076452,Threat-evidence positive baseline.
+nf_ton_iot,random_cti,0.019623,-0.137223,0.000000,0.006738,0.000375,Random control close to traffic-only; supports non-random evidence value.
+nf_ton_iot,source_gate,0.163907,0.007061,-0.153333,0.045658,-0.090568,"Strong confirmation: source gate beats traffic, weak concat, and random CTI on Macro-F1/FPR, but ECE worsens vs traffic."
+nf_ton_iot,traffic_only,0.000000,-0.156846,0.000000,0.000000,0.000000,baseline
+nf_ton_iot,weak_cti_concat,0.156846,0.000000,-0.062973,0.041958,-0.066058,Threat-evidence positive baseline.

@@ -1,0 +1,51 @@
+{
+  "upload_type": "software",
+  "title": "TrustFedFusion-IDS reproducibility code for reliability-aware federated threat-evidence fusion experiments",
+  "description": "Reproducibility scripts, data-preparation code, experiment entry points, figure-generation code, runbooks, and environment files supporting the TrustFedFusion-IDS manuscript. This record excludes cloud credentials and does not redistribute raw third-party datasets.",
+  "creators": [
+    {
+      "name": "Xie, Fucai",
+      "affiliation": "School of Network Engineering, Jiangxi Software Vocational and Technical University; School of Engineering Technology, Shinawatra University"
+    },
+    {
+      "name": "Zhong, Haijia",
+      "affiliation": "School of Engineering Technology, Shinawatra University"
+    },
+    {
+      "name": "Chai, Yahui",
+      "affiliation": "School of Network Engineering, Jiangxi Software Vocational and Technical University"
+    },
+    {
+      "name": "Lai, Fuming",
+      "affiliation": "School of Computer Science and Technology, Jiangxi University of Chinese Medicine"
+    },
+    {
+      "name": "Chen, Qizhou",
+      "affiliation": "School of Engineering Technology, Shinawatra University"
+    },
+    {
+      "name": "Qiu, Keming",
+      "affiliation": "School of Engineering Technology, Shinawatra University"
+    },
+    {
+      "name": "Wang, Xianpeng",
+      "affiliation": "School of Civil Engineering, Belarusian National Technical University; School of Graduate, International Institute of Management and Business"
+    }
+  ],
+  "keywords": [
+    "federated learning",
+    "intrusion detection",
+    "cyber threat intelligence",
+    "information fusion",
+    "reliability-aware fusion",
+    "calibration",
+    "IoT security",
+    "IIoT security",
+    "critical infrastructure security",
+    "cross-domain evaluation"
+  ],
+  "license": "MIT",
+  "version": "v0.1-release-candidate",
+  "access_right": "open",
+  "notes": "Raw third-party cybersecurity datasets, cloud credentials, publisher PDFs, and unverified processed full derivatives are excluded from this release candidate."
+}

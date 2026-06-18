@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
+  <title id="title">Figure 5 publication draft: failure and integrity panel for TrustFedFusion-IDS</title>
+  <desc id="desc">A failure and integrity panel showing Krum collapse, NumPy MLP collapse, neutral Edge neural CTI findings, unresolved calibration, bounded dataset scope, and P17 full-text boundary.</desc>
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 15px Arial, Helvetica, sans-serif; fill: #475569; }
+      .panel-title { font: 700 17px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .label { font: 700 15px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .small { font: 400 13px Arial, Helvetica, sans-serif; fill: #334155; }
+      .tiny { font: 400 12px Arial, Helvetica, sans-serif; fill: #475569; }
+      .metric { font: 700 26px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .panel { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.2; rx: 16; }
+      .fail { fill: #fee2e2; stroke: #b91c1c; stroke-width: 1.4; rx: 12; }
+      .warn { fill: #fff7ed; stroke: #c2410c; stroke-width: 1.4; rx: 12; }
+      .neutral { fill: #f1f5f9; stroke: #64748b; stroke-width: 1.3; rx: 12; }
+      .cal { fill: #fef3c7; stroke: #b45309; stroke-width: 1.3; rx: 12; }
+      .ok { fill: #ecfdf5; stroke: #15803d; stroke-width: 1.3; rx: 12; }
+      .boundary { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.1; rx: 10; }
+      .bar-bg { fill: #e2e8f0; rx: 5; }
+      .bar-red { fill: #ef4444; rx: 5; }
+      .bar-amber { fill: #f59e0b; rx: 5; }
+      .bar-green { fill: #22c55e; rx: 5; }
+      .bar-blue { fill: #3b82f6; rx: 5; }
+      .dash { stroke: #94a3b8; stroke-width: 1.4; stroke-dasharray: 6 7; fill: none; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1440" height="860" fill="#ffffff"/>
+  <text x="44" y="48" class="title">Failure and integrity panel: limits are evidence, not exceptions</text>
+  <text x="44" y="76" class="subtitle">The evaluation reports method failures, neutral neural results, calibration gaps, bounded dataset scope, and closest-prior uncertainty instead of turning partial signals into final claims.</text>
+
+  <rect x="40" y="116" width="420" height="272" class="panel"/>
+  <text x="64" y="148" class="panel-title">A. Robust aggregation can fail under label skew</text>
+  <rect x="64" y="172" width="168" height="78" class="fail"/>
+  <text x="84" y="199" class="label">Krum collapse</text>
+  <text x="84" y="225" class="metric">F1 0.0766</text>
+  <text x="84" y="242" class="tiny">20% malicious attacks</text>
+  <rect x="258" y="172" width="168" height="78" class="fail"/>
+  <text x="278" y="199" class="label">Normal FPR</text>
+  <text x="278" y="225" class="metric">1.0000</text>
+  <text x="278" y="242" class="tiny">Both attack types</text>
+  <text x="64" y="282" class="small">Boundary: robust aggregation alone does not solve non-IID poisoning.</text>
+  <rect x="64" y="306" width="348" height="12" class="bar-bg"/>
+  <rect x="64" y="306" width="348" height="12" class="bar-red"/>
+  <text x="64" y="344" class="tiny">Evidence: `kaggle_matrix_v2_summary.md`</text>
+
+  <rect x="510" y="116" width="420" height="272" class="panel"/>
+  <text x="534" y="148" class="panel-title">B. Learned NumPy MLP gate is not supported</text>
+  <rect x="534" y="172" width="168" height="78" class="fail"/>
+  <text x="554" y="199" class="label">traffic_only</text>
+  <text x="554" y="225" class="metric">F1 0.0485</text>
+  <text x="554" y="242" class="tiny">v0.3 MLP FedAvg</text>
+  <rect x="728" y="172" width="168" height="78" class="fail"/>
+  <text x="748" y="199" class="label">source_gate</text>
+  <text x="748" y="225" class="metric">F1 0.0209</text>
+  <text x="748" y="242" class="tiny">Below traffic-only</text>
+  <text x="534" y="282" class="small">Boundary: v0.3 is failure analysis, not a learned-gate success.</text>
+  <rect x="534" y="306" width="348" height="12" class="bar-bg"/>
+  <rect x="534" y="306" width="42" height="12" class="bar-red"/>
+  <text x="534" y="344" class="tiny">Evidence: `kaggle_cti_v03_mlp_summary.md`</text>
+
+  <rect x="980" y="116" width="420" height="272" class="panel"/>
+  <text x="1004" y="148" class="panel-title">C. Edge neural CTI gain is neutral/negative</text>
+  <rect x="1004" y="172" width="168" height="78" class="neutral"/>
+  <text x="1024" y="199" class="label">traffic_only</text>
+  <text x="1024" y="225" class="metric">F1 0.8241</text>
+  <text x="1024" y="242" class="tiny">Torch MLP v0.4</text>
+  <rect x="1198" y="172" width="168" height="78" class="warn"/>
+  <text x="1218" y="199" class="label">source_gate</text>
+  <text x="1218" y="225" class="metric">-0.0065</text>
+  <text x="1218" y="242" class="tiny">vs traffic-only</text>
+  <text x="1004" y="282" class="small">Boundary: do not claim CTI/source evidence improves Edge neural IDS.</text>
+  <rect x="1004" y="306" width="348" height="12" class="bar-bg"/>
+  <rect x="1004" y="306" width="343" height="12" class="bar-blue"/>
+  <text x="1004" y="344" class="tiny">Evidence: `kaggle_cti_v04_torch_mlp_summary.md`</text>
+
+  <rect x="40" y="426" width="420" height="272" class="panel"/>
+  <text x="64" y="458" class="panel-title">D. Calibration remains unresolved through v0.8</text>
+  <rect x="64" y="482" width="168" height="78" class="ok"/>
+  <text x="84" y="509" class="label">traffic_only</text>
+  <text x="84" y="535" class="metric">ECE 0.0506</text>
+  <text x="84" y="552" class="tiny">Scalar temperature ECE</text>
+  <rect x="258" y="482" width="168" height="78" class="cal"/>
+  <text x="278" y="509" class="label">cal_source_gate</text>
+  <text x="278" y="535" class="metric">ECE 0.1084</text>
+  <text x="278" y="552" class="tiny">Group3 ECE: 0.1067</text>
+  <text x="64" y="592" class="small">Boundary: F1/FPR is partial positive; calibration is not solved.</text>
+  <rect x="64" y="616" width="348" height="12" class="bar-bg"/>
+  <rect x="64" y="616" width="162" height="12" class="bar-green"/>
+  <rect x="64" y="636" width="348" height="12" class="bar-amber"/>
+  <text x="64" y="674" class="tiny">Evidence: `cti_v08_posthoc_calibration_summary.md`</text>
+
+  <rect x="510" y="426" width="420" height="272" class="panel"/>
+  <text x="534" y="458" class="panel-title">E. Cross-domain evidence stays bounded</text>
+  <rect x="534" y="482" width="362" height="58" class="boundary"/>
+  <text x="556" y="508" class="label">CICIoT2023</text>
+  <text x="682" y="508" class="small">sampled / rare-family runs only</text>
+  <rect x="534" y="558" width="362" height="58" class="boundary"/>
+  <text x="556" y="584" class="label">NetFlow</text>
+  <text x="682" y="584" class="small">stress + per-family 100k cap</text>
+  <rect x="534" y="634" width="362" height="40" class="warn"/>
+  <text x="556" y="660" class="label">Do not write full raw-dataset final performance</text>
+  <text x="534" y="694" class="tiny">Evidence: CICIoT, UNSW, NetFlow summaries and Table 3</text>
+
+  <rect x="980" y="426" width="420" height="272" class="panel"/>
+  <text x="1004" y="458" class="panel-title">F. Closest-prior claims are blocked</text>
+  <rect x="1004" y="482" width="362" height="58" class="boundary"/>
+  <text x="1026" y="508" class="label">P17 FedKD-IDS</text>
+  <text x="1026" y="529" class="small">Information Fusion closest prior, metadata-only</text>
+  <rect x="1004" y="558" width="362" height="58" class="fail"/>
+  <text x="1026" y="584" class="label">Blocked claims</text>
+  <text x="1026" y="605" class="small">No absence claim; no superiority claim</text>
+  <rect x="1004" y="634" width="362" height="40" class="warn"/>
+  <text x="1026" y="660" class="label">Formal abstract gate remains closed</text>
+  <text x="1004" y="690" class="tiny">Evidence: claim registry; P17 comparison</text>
+
+  <rect x="66" y="734" width="1308" height="70" class="boundary"/>
+  <text x="90" y="762" class="panel-title">Integrity rule for the manuscript</text>
+  <text x="90" y="789" class="small">A result can strengthen the paper even when it is negative: failures define the contribution boundary, prevent overclaiming, and guide the next experiment instead of being hidden.</text>
+</svg>

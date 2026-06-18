@@ -1,0 +1,21 @@
+comparison,metric,delta
+weak_cti_concat - traffic_only,macro_f1,-0.013669757425766926
+source_gate_alpha0p5 - traffic_only,macro_f1,-0.02760108115149817
+source_gate_alpha0p5 - weak_cti_concat,macro_f1,-0.013931323725731245
+random_cti - traffic_only,macro_f1,-0.013104836546992953
+weak_cti_concat - traffic_only,accuracy,-0.02628938390527795
+source_gate_alpha0p5 - traffic_only,accuracy,-0.04878692818741617
+source_gate_alpha0p5 - weak_cti_concat,accuracy,-0.022497544282138224
+random_cti - traffic_only,accuracy,-0.03621787762603378
+weak_cti_concat - traffic_only,normal_fpr,0.028052126200274308
+source_gate_alpha0p5 - traffic_only,normal_fpr,-0.0029492455418381747
+source_gate_alpha0p5 - weak_cti_concat,normal_fpr,-0.031001371742112482
+random_cti - traffic_only,normal_fpr,0.025171467764060318
+weak_cti_concat - traffic_only,ece,0.06900781713732158
+source_gate_alpha0p5 - traffic_only,ece,0.0919322925631438
+source_gate_alpha0p5 - weak_cti_concat,ece,0.02292447542582221
+random_cti - traffic_only,ece,0.07793524162416417
+weak_cti_concat - traffic_only,brier,0.046114850883679726
+source_gate_alpha0p5 - traffic_only,brier,0.05972381638190205
+source_gate_alpha0p5 - weak_cti_concat,brier,0.013608965498222325
+random_cti - traffic_only,brier,0.048661460273431434

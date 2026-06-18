@@ -1,0 +1,13 @@
+panel,evidence_block,scope,metric,traffic_only,weak_cti,source_gate,random_cti,source_delta_vs_traffic,source_delta_vs_weak,boundary
+A,Edge-IIoT linear FL v0.2,"Edge-IIoT clean full, 30 rounds x 3 seeds",Macro-F1,0.4508,0.4977,0.4706,0.4506,0.0198,-0.0271,"Linear FL only; source gate not final best on Edge."
+A,Edge-IIoT centralized Torch MLP v0.4,"Edge-IIoT clean full, centralized MLP x 3 seeds",Macro-F1,0.8241,0.8245,0.8175,0.8168,-0.0065,-0.0070,"Neutral/negative for neural CTI claim."
+A,CICIoT2023 rare-family sampled,"CICIoT2023 bounded rare-family sample x 3 seeds",Macro-F1,0.5619,0.5725,0.5722,0.5614,0.0103,-0.0003,"Bounded sample, not full CICIoT performance."
+A,UNSW-NB15 official split,"UNSW official train/test x 3 seeds",Macro-F1,0.2230,0.2628,0.2853,0.2330,0.0623,0.0225,"ECE worsens; random CTI gives small Macro-F1 gain."
+B,NF-ToN-IoT NetFlow stress,"NF-ToN bounded per-family sample x 3 seeds",Macro-F1,0.2849,0.4489,0.4566,0.2986,0.1716,0.0077,"Bounded stress probe, not full-dataset final result."
+B,NF-BoT-IoT NetFlow stress,"NF-BoT bounded per-family sample x 3 seeds",Macro-F1,0.4895,0.5659,0.5759,0.4954,0.0865,0.0100,"Bounded stress probe, not full-dataset final result."
+B,NF-ToN-IoT NetFlow near-full,"NF-ToN per-family 100k cap x 3 seeds",Macro-F1,0.2121,0.3689,0.3760,0.2317,0.1639,0.0071,"Per-family capped; ECE worsens vs traffic-only."
+B,NF-BoT-IoT NetFlow near-full,"NF-BoT per-family 100k cap x 3 seeds",Macro-F1,0.4346,0.4928,0.4870,0.4492,0.0524,-0.0058,"Per-family capped; source gate trails weak concat on Macro-F1."
+C,UNSW-NB15 v0.5 calibrated,"UNSW official train/test, train-core validation calibration x 3 seeds",Macro-F1,0.2161,0.2690,0.2974,0.2261,0.0813,0.0284,"Temperature scaling and raw-hint pruning do not fix source-gate ECE."
+C,UNSW-NB15 v0.6 calibrated gate,"UNSW official train/test, validation-selected alpha x 3 seeds",Macro-F1,0.2161,0.2690,0.3029,0.2261,0.0869,0.0339,"Calibration still not solved; temp ECE 0.1084 vs traffic 0.0506."
+C,UNSW-NB15 v0.7 calibration objective,"UNSW official train/test, composite ECE/Brier alpha objective x 3 seeds",Macro-F1,0.2161,,0.3029,0.2261,0.0869,,"Negative/neutral calibration result; composite objective did not improve ECE/Brier."
+D,UNSW-NB15 v0.8 post-hoc calibration,"UNSW official train/test, source-gate-binned temperature scaling x 3 seeds",Temp ECE,0.0506,,0.1084,0.0511,0.0579,,"Scalar ECE shown; group3 source-gate ECE is 0.1067, so post-hoc binning does not solve calibration."

@@ -1,0 +1,8 @@
+scenario,delta_macro_f1_vs_traffic,delta_normal_fpr_vs_traffic,delta_temp_ece_vs_traffic,delta_group3_ece_vs_scalar,delta_group3_brier_vs_scalar,delta_macro_f1_vs_cal_random_source_gate,interpretation
+cal_random_source_gate,+0.007534,-0.006198,+0.001762,+0.000000,+0.000000,+0.000000,Negative/random control remains low on Macro-F1; scalar calibration may reduce ECE similarly or more than real source-gate variants.
+cal_random_source_gate_ece,+0.013598,-0.005703,+0.004376,+0.000000,+0.000000,+0.006064,Negative/random control remains low on Macro-F1; scalar calibration may reduce ECE similarly or more than real source-gate variants.
+cal_source_gate,+0.086858,-0.069577,+0.057888,-0.001712,-0.002122,+0.079324,"Partial positive: higher Macro-F1/lower FPR, but source-gate ECE remains much higher than traffic-only; group3 gives only a small ECE reduction and Brier remains worse than raw."
+cal_source_gate_ece,+0.086858,-0.069577,+0.057888,-0.001712,-0.002122,+0.079324,"Partial positive: higher Macro-F1/lower FPR, but source-gate ECE remains much higher than traffic-only; group3 gives only a small ECE reduction and Brier remains worse than raw."
+random_cti,+0.010053,-0.003009,+0.000528,+0.000000,+0.000000,+0.002519,Negative/random control remains low on Macro-F1; scalar calibration may reduce ECE similarly or more than real source-gate variants.
+source_gate,+0.081326,-0.063784,+0.055590,-0.001044,+0.001585,+0.073792,Positive F1/FPR relative to traffic; group-binned temperature gives negligible ECE change and does not solve calibration.
+traffic_only,+0.000000,+0.000000,+0.000000,+0.000000,+0.000000,-0.007534,baseline

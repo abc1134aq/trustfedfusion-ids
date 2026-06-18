@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "TrustFedFusion-IDS reproducibility package"
+message: "Please cite the associated manuscript and repository DOI once the public release is created."
+type: software
+authors:
+  - name: "Fucai Xie"
+  - name: "Haijia Zhong"
+  - name: "Yahui Chai"
+  - name: "Fuming Lai"
+  - name: "Qizhou Chen"
+  - name: "Keming Qiu"
+  - name: "Xianpeng Wang"
+repository-code: "To be added after the public code repository is created"
+abstract: "Processed data, source data, result summaries, figure-generation scripts, and reproducibility runbooks for the TrustFedFusion-IDS manuscript."
+keywords:
+  - federated learning
+  - intrusion detection
+  - threat intelligence
+  - information fusion
+  - calibration
+license: "MIT"
+version: "v0.1-release-candidate"
+date-released: "2026-06-16"

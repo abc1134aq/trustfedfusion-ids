@@ -1,0 +1,27 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.venv/
+venv/
+env/
+*.log
+*.tmp
+*.bak
+
+# Never commit credentials or cloud tokens.
+access_token
+kaggle.json
+*.pem
+id_ed25519*
+*.key
+.colab-cli-oauth.json
+
+# Keep raw third-party datasets out of the public repository.
+data/raw/
+raw/
+*.parquet
+*.feather
+*.h5
+*.hdf5

@@ -1,0 +1,5 @@
+dataset,path,size_mb,rows,columns,label_candidates,flow_hint_columns
+nf_ton_iot,02_Data/kaggle/nf_ton_iot/NF-ToN-IoT.parquet,9.052,1157994,12,Label; Attack,L4_SRC_PORT; L4_DST_PORT; PROTOCOL; IN_BYTES; OUT_BYTES; IN_PKTS; OUT_PKTS; TCP_FLAGS; FLOW_DURATION_MILLISECONDS
+nf_bot_iot,02_Data/kaggle/nf_bot_iot/NF-BoT-IoT.parquet,2.147,595376,12,Label; Attack,L4_SRC_PORT; L4_DST_PORT; PROTOCOL; IN_BYTES; OUT_BYTES; IN_PKTS; OUT_PKTS; TCP_FLAGS; FLOW_DURATION_MILLISECONDS
+unsw_nb15_train,02_Data/kaggle/unsw_nb15/UNSW_NB15_training-set.parquet,9.172,175341,36,attack_cat; label,dur; proto; service; state; sbytes; dbytes; rate
+unsw_nb15_test,02_Data/kaggle/unsw_nb15/UNSW_NB15_testing-set.parquet,4.329,82332,36,attack_cat; label,dur; proto; service; state; sbytes; dbytes; rate
