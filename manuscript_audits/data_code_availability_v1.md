@@ -48,3 +48,10 @@ Before submission, the code package should be archived as a versioned public rel
 - 不能写“数据可向作者索取”作为主要方案，除非有明确限制原因和审核路径。
 - 不能公开或保存任何 Kaggle/Colab token。
 - 不能把 Kaggle 挂载路径当成长期可引用的数据 DOI。
+
+## Final Repository Identifiers Applied
+
+- Code repository: https://github.com/abc1134aq/trustfedfusion-ids
+- Code DOI/accession: 10.5281/zenodo.20748694
+- Source-data/results repository: https://zenodo.org/records/20748765
+- Source-data/results DOI/accession: 10.5281/zenodo.20748765

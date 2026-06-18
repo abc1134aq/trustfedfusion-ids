@@ -1,6 +1,6 @@
 # TrustFedFusion-IDS reproducibility package
 
-Status: release-candidate README draft. This package has not yet been deposited in a public repository and does not yet have a DOI.
+Status: repository identifiers applied. Code repository: https://github.com/abc1134aq/trustfedfusion-ids; Code DOI/accession: 10.5281/zenodo.20748694; source-data/results repository: https://zenodo.org/records/20748765; source-data/results DOI/accession: 10.5281/zenodo.20748765; publication date: 2026-06-18.
 
 ## What this package supports
 
@@ -178,7 +178,7 @@ Cloud outputs become manuscript evidence only after:
 
 ## Citation
 
-After public deposit, cite the data/source-data record and code record using their repository DOI or accession. Until then, this README is a release-candidate draft and should not be cited as a public archive.
+For public citation, cite the code record and source-data/results record using these persistent identifiers: code repository https://github.com/abc1134aq/trustfedfusion-ids, code DOI/accession 10.5281/zenodo.20748694; source-data/results repository https://zenodo.org/records/20748765, source-data/results DOI/accession 10.5281/zenodo.20748765.
 
 ## Licence
 

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "TrustFedFusion-IDS reproducibility package"
-message: "Please cite the associated manuscript and repository DOI once the public release is created."
+message: "Please cite this release using the repository DOI recorded in this CITATION.cff file."
 type: software
 authors:
   - name: "Fucai Xie"
@@ -10,7 +10,7 @@ authors:
   - name: "Qizhou Chen"
   - name: "Keming Qiu"
   - name: "Xianpeng Wang"
-repository-code: "To be added after the public code repository is created"
+repository-code: "https://github.com/abc1134aq/trustfedfusion-ids"
 abstract: "Processed data, source data, result summaries, figure-generation scripts, and reproducibility runbooks for the TrustFedFusion-IDS manuscript."
 keywords:
   - federated learning
@@ -21,3 +21,5 @@ keywords:
 license: "MIT"
 version: "v0.1-release-candidate"
 date-released: "2026-06-16"
+
+doi: "10.5281/zenodo.20748694"
